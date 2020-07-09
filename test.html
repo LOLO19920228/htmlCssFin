@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMPTJS測試</title>
+</head>
+<body>
+    <form action="" method="POST">
+        <input type="button" value="send Email" onclick="sendEmail()">
+    </form>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                SecureToken: "0312ffd2-7422-4e47-9ef2-948b3fc865c2",
+                To: 'test@eavision.com.tw',
+                From: "test@eavision.com.tw",
+                Subject: "SMTPJS測試",
+                Body: "測試"
+            }).then(
+                message => alert(message)
+            );
+        }
+    </script>
+</body>
+</html>
